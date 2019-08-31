@@ -13,10 +13,10 @@ describe("all", () => {
 
 describe("any", () => {
   test("that any iterables are odd numbers", () => {
-    expect(all([2,4,7,8], (x: number) => x % 2 == 1)).toEqual(true);
+    expect(any([2,4,7,8], (x: number) => x % 2 == 1)).toEqual(true);
   })
 
-  test("that an6t iterables are even numbers", () => {
-    expect(all([2,4,7,8], (x: number) => x % 2 == 1)).toEqual(false);
+  test("that any of iterables are an odd numbers", () => {
+    expect(any([2,4,6,8], (x: number) => x % 2 == 1)).toEqual(false);
   })
 })
