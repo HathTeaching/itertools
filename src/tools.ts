@@ -24,11 +24,21 @@ function * ints() {
 // }
 
 export function all<T>(iterables: Iterable<T>, fn: (item: T) => boolean): boolean {
-
+  for(let item of iterables) {
+    if(!fn(item)) {
+      return false;
+    }
+  }
+  return true;
 }
 
 export function any<T>(iterables: Iterable<T>, fn: (item: T) => boolean): boolean {
-
+  for(let item of iterables) {
+    if(fn(item)) {
+      return true;
+    }
+  }
+  return false;
 }
 
 /*
